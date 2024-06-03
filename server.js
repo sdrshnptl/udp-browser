@@ -18,7 +18,8 @@ io.on('connection', (socket) => {
 });
 
 const PORT = process.env.PORT || 3210;
-server.listen(PORT, () => {
+const HOST = '0.0.0.0'; // Listen on all interfaces
+server.listen(PORT, HOST, () => {
   console.log(`Web server running on port ${PORT}`);
 });
 

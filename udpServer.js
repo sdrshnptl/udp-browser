@@ -17,7 +17,7 @@ function startUdpServer(io) {
     console.log(`UDP Server listening on ${address.address}:${address.port}`);
   });
 
-  udpServer.bind(41234);  // Bind to port 41234
+  udpServer.bind(41234, '0.0.0.0');  // Bind to all interfaces on port 41234
 }
 
 module.exports = startUdpServer;
